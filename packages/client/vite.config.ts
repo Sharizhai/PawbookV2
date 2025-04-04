@@ -1,3 +1,4 @@
+import { paraglideVitePlugin } from '@inlang/paraglide-js'
 import { defineConfig } from "vite";
 import { svelte } from "@sveltejs/vite-plugin-svelte";
 import sveltePreprocess from "svelte-preprocess";
@@ -5,7 +6,7 @@ import sveltePreprocess from "svelte-preprocess";
 import path from "path";
 
 export default defineConfig({
-  plugins: [
+  plugins: [paraglideVitePlugin({ project: './project.inlang', outdir: './src/paraglide' }),
     svelte({
       preprocess: sveltePreprocess()
     })

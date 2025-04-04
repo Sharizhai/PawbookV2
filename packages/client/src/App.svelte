@@ -1,12 +1,17 @@
 <script lang="ts">
-
+  import Router from "svelte-spa-router";
+  import HomePage from "./pages/HomePage.svelte";
+  import { app } from "$stores/stores.svelte";
+  import { onMount } from "svelte";
+  
+  const routes = {
+    "/": HomePage
+  };
+ 
+  onMount(() => {
+    app.activeLocale = localStorage.getItem("locale") ?? navigator.language.slice(0, 2);
+  });
+  
 </script>
 
-<h1 class="app-title">Bienvenue sur PawBook !</h1>
-
-<style lang="scss">
-  .app-title {
-    font-family: var(--title-font-family);
-    text-align: center;
-  }
-</style>
+<Router {routes} />

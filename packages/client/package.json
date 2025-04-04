@@ -5,13 +5,15 @@
   "scripts": {
     "dev": "pnpm run compile-localization && vite --host",
     "build": "pnpm run compile-localization && paraglide-js compile --project ./project.inlang --outdir ./src/paraglide && vite build",
-    "compile-localization": "paraglide-js compile --project ./project.inlang --outdir ./src/lib/paraglide"
+    "compile-localization": "paraglide-js compile --project ./project.inlang --outdir ./src/lib/paraglide",
+    "machine-translate": "inlang machine translate --project project.inlang"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@inlang/paraglide-js": "^2.0.10",
+    "@inlang/cli": "^3.0.0",
+    "@inlang/paraglide-js": "2.0.10",
     "@sveltejs/vite-plugin-svelte": "^5.0.3",
     "@tsconfig/svelte": "^5.0.4",
     "svelte": "^5.25.3",
@@ -21,13 +23,13 @@
   },
   "dependencies": {
     "@glidejs/glide": "^3.7.1",
-    "@mateothegreat/svelte5-router": "^2.14.1",
     "@types/node": "^22.13.14",
     "animate.css": "^4.1.1",
     "date-fns": "^4.1.0",
     "jwt-decode": "^4.0.0",
     "sass": "^1.86.3",
     "svelte-preprocess": "^6.0.3",
+    "svelte-spa-router": "^4.0.1",
     "sweetalert2": "^11.17.2",
     "zustand": "^5.0.3"
   }

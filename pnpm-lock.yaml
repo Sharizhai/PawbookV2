@@ -36,9 +36,6 @@ importers:
       '@glidejs/glide':
         specifier: ^3.7.1
         version: 3.7.1
-      '@mateothegreat/svelte5-router':
-        specifier: ^2.14.1
-        version: 2.14.1(svelte@5.25.3)
       '@types/node':
         specifier: ^22.13.14
         version: 22.13.14
@@ -57,6 +54,9 @@ importers:
       svelte-preprocess:
         specifier: ^6.0.3
         version: 6.0.3(postcss@8.5.3)(sass@1.86.3)(svelte@5.25.3)(typescript@5.8.2)
+      svelte-spa-router:
+        specifier: ^4.0.1
+        version: 4.0.1
       sweetalert2:
         specifier: ^11.17.2
         version: 11.17.2
@@ -64,8 +64,11 @@ importers:
         specifier: ^5.0.3
         version: 5.0.3
     devDependencies:
+      '@inlang/cli':
+        specifier: ^3.0.0
+        version: 3.0.10
       '@inlang/paraglide-js':
-        specifier: ^2.0.10
+        specifier: 2.0.10
         version: 2.0.10
       '@sveltejs/vite-plugin-svelte':
         specifier: ^5.0.3
@@ -280,6 +283,11 @@ packages:
   '@glidejs/glide@3.7.1':
     resolution: {integrity: sha512-8he0pZpLSqTesSFYiuWdhBmtdlYSPWxfPUCKtkkiX6ZmT8UdMdmoFPtJaOwLBXv4p2JiGxqbuPdiRGGo2e/htQ==}
 
+  '@inlang/cli@3.0.10':
+    resolution: {integrity: sha512-09uUevAj6pw8n+sPrN0Pl9NQMObQeLve01DVJRIMfLZ/qOZbrWwnOWsU748phTJc88subDp3CHk7B/IeHfB8UQ==}
+    engines: {node: '>=18.0.0'}
+    hasBin: true
+
   '@inlang/paraglide-js@2.0.10':
     resolution: {integrity: sha512-rsG6GfQwAtr9oby9vPtkEw0RItADGyS3ru82fc8DHpuSeQO9BVHnX5l7jsNLcV991GcwCodc+b72doEUtvRXVA==}
     hasBin: true
@@ -318,11 +326,6 @@ packages:
 
   '@lix-js/server-protocol-schema@0.1.1':
     resolution: {integrity: sha512-jBeALB6prAbtr5q4vTuxnRZZv1M2rKe8iNqRQhFJ4Tv7150unEa0vKyz0hs8Gl3fUGsWaNJBh3J8++fpbrpRBQ==}
-
-  '@mateothegreat/svelte5-router@2.14.1':
-    resolution: {integrity: sha512-bjvnd7uJA/gG9oZ/B1/VBti2Z8Jc2XJfUl4mxFO04m0ORb9rwUdieMvzSGMfBNmQTHFK6ARU6rjp5rGPGNn9dQ==}
-    peerDependencies:
-      svelte: ^5.0.0
 
   '@parcel/watcher-android-arm64@2.5.1':
     resolution: {integrity: sha512-KF8+j9nNbUN8vzOFDpRMsaKBHZ/mcjEjMToVMJOhTozkDonQFFrRcfdLWn6yWKCmJKmdVxSgHiYvTCef4/qcBA==}
@@ -820,6 +823,11 @@ packages:
     resolution: {integrity: sha512-FGgH2h8zKNim9ljj7dankFPcICIK9Cp5bm+c2gQSYePhpaG5+esrLODihIorn+Pe6FGJzWhXQotPv73jTaldXA==}
     engines: {node: '>= 0.4'}
 
+  esbuild-wasm@0.19.12:
+    resolution: {integrity: sha512-Zmc4hk6FibJZBcTx5/8K/4jT3/oG1vkGTEeKJUQFCUQKimD6Q7+adp/bdVQyYJFolMKaXkQnVZdV4O5ZaTYmyQ==}
+    engines: {node: '>=12'}
+    hasBin: true
+
   esbuild@0.25.1:
     resolution: {integrity: sha512-BGO5LtrGC7vxnqucAe/rmvKdJllfGaYWdyABvyMoXQlfYMb2bbRuReWR5tEGE//4LcNJj9XrkovTqNYRFZHAMQ==}
     engines: {node: '>=18'}
@@ -1114,6 +1122,10 @@ packages:
     resolution: {integrity: sha512-GDhwkLfywWL2s6vEjyhri+eXmfH6j1L7JE27WhqLeYzoh/A3DBaYGEj2H/HFZCn/kMfim73FXxEJTw06WtxQwg==}
     engines: {node: '>= 14.18.0'}
 
+  regexparam@2.0.2:
+    resolution: {integrity: sha512-A1PeDEYMrkLrfyOwv2jwihXbo9qxdGD3atBYQA9JJgreAx8/7rC6IUkWOw2NQlOxLp2wL0ifQbh1HuidDfYA6w==}
+    engines: {node: '>=8'}
+
   repeat-string@1.6.1:
     resolution: {integrity: sha512-PV0dzCYDNfRi1jCDbJzpW7jNNDRuCOG/jI5ctQcGKt/clZD+YcPS3yIlWuTJMmESC8aevCFmWJy5wjAFgNqN6w==}
     engines: {node: '>=0.10'}
@@ -1253,6 +1265,9 @@ packages:
         optional: true
       typescript:
         optional: true
+
+  svelte-spa-router@4.0.1:
+    resolution: {integrity: sha512-2JkmUQ2f9jRluijL58LtdQBIpynSbem2eBGp4zXdi7aDY1znbR6yjw0KsonD0aq2QLwf4Yx4tBJQjxIjgjXHKg==}
 
   svelte@5.25.3:
     resolution: {integrity: sha512-J9rcZ/xVJonAoESqVGHHZhrNdVbrCfkdB41BP6eiwHMoFShD9it3yZXApVYMHdGfCshBsZCKsajwJeBbS/M1zg==}
@@ -1515,6 +1530,13 @@ snapshots:
 
   '@glidejs/glide@3.7.1': {}
 
+  '@inlang/cli@3.0.10':
+    dependencies:
+      '@inlang/sdk': 2.4.7
+      esbuild-wasm: 0.19.12
+    transitivePeerDependencies:
+      - babel-plugin-macros
+
   '@inlang/paraglide-js@2.0.10':
     dependencies:
       '@inlang/recommend-sherlock': 0.2.1
@@ -1576,10 +1598,6 @@ snapshots:
       - babel-plugin-macros
 
   '@lix-js/server-protocol-schema@0.1.1': {}
-
-  '@mateothegreat/svelte5-router@2.14.1(svelte@5.25.3)':
-    dependencies:
-      svelte: 5.25.3
 
   '@parcel/watcher-android-arm64@2.5.1':
     optional: true
@@ -1998,6 +2016,8 @@ snapshots:
     dependencies:
       es-errors: 1.3.0
 
+  esbuild-wasm@0.19.12: {}
+
   esbuild@0.25.1:
     optionalDependencies:
       '@esbuild/aix-ppc64': 0.25.1
@@ -2299,6 +2319,8 @@ snapshots:
 
   readdirp@4.1.2: {}
 
+  regexparam@2.0.2: {}
+
   repeat-string@1.6.1: {}
 
   require-directory@2.1.1: {}
@@ -2450,6 +2472,10 @@ snapshots:
       postcss: 8.5.3
       sass: 1.86.3
       typescript: 5.8.2
+
+  svelte-spa-router@4.0.1:
+    dependencies:
+      regexparam: 2.0.2
 
   svelte@5.25.3:
     dependencies:
