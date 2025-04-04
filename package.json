@@ -1,0 +1,26 @@
+{
+  "name": "pawbook",
+  "version": "2.0.0",
+  "scripts": {
+    "dev:client": "pnpm --filter pawbook-client dev",
+    "dev:server": "pnpm --filter pawbook-server dev",
+    "dev": "concurrently \"pnpm dev:client\" \"pnpm dev:server\"",
+    "build:client": "pnpm --filter pawbook-client build",
+    "build:server": "pnpm --filter pawbook-server build",
+    "start:server": "pnpm --filter pawbook-server start"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "^5.0.3",
+    "@types/cors": "^2.8.17",
+    "@types/node": "^22.13.14",
+    "concurrently": "^9.1.2",
+    "svelte-preprocess": "^6.0.3",
+    "vite": "^6.2.3"
+  },
+  "dependencies": {
+    "sass": "^1.86.3"
+  }
+}

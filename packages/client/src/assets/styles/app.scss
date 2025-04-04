@@ -1,0 +1,103 @@
+:root {
+    font-family: "Roboto", serif;
+    font-weight: 400;
+    font-style: normal;
+  
+    --main-text-color: #001F31;
+    --second-text-color: #45525A;
+
+    --main-highlight-color: #54A49C;
+    --second-highlight-color: #1E8AB6;
+
+    --main-background-color: #EEE7E2;
+    --second-background-color: #D9A49180;
+
+    --color-main-light: #E3C6B9;
+    --color-main-medium: #DEB5A5;
+    --color-main-dark: #D9A491;
+
+    --color-like: #CC0129;
+    --color-edit: #F9A521;
+    --color-pre-alert: #f0ad4e;
+    --color-alert: #A60815;
+   
+    --main-filter-drop-shadow: drop-shadow(0px 5px 4px rgba(0, 0, 0, 0.4));
+    --main-hover-transition: color 200ms ease-out;
+  
+    --icon-active-color: var(--main-active-color);
+   
+    --title-font-family: "Lobster", serif;
+  
+    color-scheme: light dark;
+    color: var(--main-text-color);
+  
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  
+  html {
+    font-size: 12px;
+   
+    @media only screen and (min-width: 1800px) {
+      font-size: 16px;
+    }
+   
+    &:has(body.mobile) {
+      font-size: 10px;
+    }
+  }
+  
+  body {
+    margin: 0;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    color: var(--main-text-color);
+    background-color: var(--main-background-color);
+    overflow: hidden;
+  }
+  
+  #app {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+  }
+  
+  a {
+    color: var(--main-text-color);
+    text-decoration: none;
+   
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  
+  .material-icons {
+    font-family: "Material Symbols Rounded";
+    font-variation-settings:
+            'FILL' 0,
+            'wght' 700,
+            'GRAD' 0,
+            'opsz' 48;
+    -webkit-user-select: none;
+    user-select: none;
+    vertical-align: middle;
+   
+    &.fill {
+      font-variation-settings: 'FILL' 1;
+    }
+   
+    &.bolder {
+      font-variation-settings: 'wght' 900;
+    }
+  }
