@@ -6,19 +6,23 @@ import sveltePreprocess from "svelte-preprocess";
 import path from "path";
 
 export default defineConfig({
-  plugins: [paraglideVitePlugin({ project: './project.inlang', outdir: './src/paraglide' }),
-    svelte({
-      preprocess: sveltePreprocess()
-    })
+  plugins: [svelte({
+              preprocess: sveltePreprocess()
+            }),
+            paraglideVitePlugin({ 
+              project: './project.inlang', 
+              outdir: './src/paraglide' 
+            }),
   ], 
   resolve: {
     alias: {
+      $public: path.resolve("./public"),
+      $assets: path.resolve("./src/assets"),
       $lib: path.resolve("./src/lib"),
-      $components: path.resolve("./src/components"),
+      $pages: path.resolve("./src/pages"),
+      $services: path.resolve("./src/services"),
       $stores: path.resolve("./src/stores"),
       $utils: path.resolve("./src/utils"),
-      $assets: path.resolve("./src/assets"),
-      $routes: path.resolve("./src/routes"),
     }
   }
 });
