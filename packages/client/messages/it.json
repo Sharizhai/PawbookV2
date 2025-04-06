@@ -1,5 +1,10 @@
 {
     "$schema": "https://inlang.com/schema/inlang-message-format",
 
-    "website_catchphrase": "Il primo social network per gli amanti degli animali"
+    "website_catchphrase": "Il primo social network per gli amanti degli animali",
+
+    "website_language": "Lingua",
+
+    "home_connection": "Accedi",
+    "home_inscription": "Creare un account"
 }
