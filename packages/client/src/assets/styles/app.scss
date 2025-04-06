@@ -45,13 +45,21 @@
   
   html {
     font-size: 16px;
-   
-    @media only screen and (min-width: 1800px) {
-      font-size: 16px;
+
+    @media only screen and (min-width: 320px) {
+      font-size: 12px;
+    }
+
+    @media only screen and (min-width: 768px) {
+        font-size: 14px;
     }
    
-    &:has(body.mobile) {
-      font-size: 10px;
+    @media only screen and (min-width: 1200px) {
+      font-size: 15px;
+    }
+
+    @media only screen and (min-width: 1800px) {
+      font-size: 16px;
     }
   }
   
@@ -83,7 +91,7 @@
   }
   
   .material-icons {
-    font-family: "Material Symbols Rounded";
+    font-family: "Material Symbols Outlined";
     font-variation-settings:
             'FILL' 0,
             'wght' 700,
