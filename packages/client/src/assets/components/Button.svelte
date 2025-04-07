@@ -41,6 +41,7 @@
 
         &:hover {
             color: var(--second-highlight-color);
+            border: 1px solid var(--second-highlight-color);
         }
     }
 
@@ -51,6 +52,7 @@
 
         &:hover {
             color: var(--second-highlight-color);
+            border: 1px solid var(--main-text-color);
         }
     }
 </style>
