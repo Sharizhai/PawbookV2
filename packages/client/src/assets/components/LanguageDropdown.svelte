@@ -1,9 +1,6 @@
 <script lang="ts">
     import { languageOptions } from "$lib/types/languageTypes";
-    import * as messages from "$lib/paraglide/messages";
     import { app } from "$stores/stores.svelte";
-
-    const languageLabel = messages.website_language();
 
     let isLanguageDropdownExpanded = false;
 
