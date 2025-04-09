@@ -5,14 +5,16 @@
   import { onMount } from "svelte";
   
 
+  import AccountCreationPage from "$pages/AccountCreationPage.svelte";
   import LoginPage from "./pages/LoginPage.svelte";
   import HomePage from "./pages/HomePage.svelte";
   import GcuPage from "./pages/GCUPage.svelte";
   
   const routes = {
     "/": HomePage,
+    "/gcu": GcuPage,
     "/login": LoginPage,
-    "/gcu": GcuPage
+    "/signup": AccountCreationPage,
   };
  
   onMount(() => {
