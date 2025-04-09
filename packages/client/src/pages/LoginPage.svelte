@@ -1,0 +1,170 @@
+<svelte:head>
+  <title>Pawbook login</title>
+</svelte:head>
+
+<script lang="ts">
+    import LanguageDropdown from "$assets/components/LanguageDropdown.svelte";
+    import Button from "$assets/components/Button.svelte";
+    import * as messages from "$lib/paraglide/messages";
+    import Input from "$assets/components/Input.svelte";
+    import { link, push } from "svelte-spa-router";
+    import logo from "/logo.png";
+
+    const emailLabel = messages.email();
+    const emailPlaceholder = messages.email_placholder();
+    const passwordLabel = messages.password();
+    const passwordPlaceholder = messages.password_placeholder();
+    const loginLabel = messages.login_connexion();
+    const passwordForgotten = messages.login_forgotten_password();
+    const noAccount = messages.login_no_account();
+    const createAccount = messages.login_create_account();
+    const gcuLabel = messages.home_gcu();
+
+    function onLoginButtonClick() {
+        // TODO : Implement login logic
+    }
+
+    function onCreateAccountButtonClick() {
+        push("/signup");
+    }
+
+</script>
+
+    <main id="login-page-container">
+        <div class="language-dropdown-container">
+            <LanguageDropdown />
+        </div>
+        <img alt="PawBook Logo" class="login-page-logo" src={logo} />
+        <h1 class="login-page-title">Pawbook</h1>
+
+        <div class="login-page-form-container">
+            <form class="login-page-form" action="/login" method="POST">
+                <Input label={emailLabel} type={"email"} placeholder={emailPlaceholder}/>
+                <Input label={passwordLabel} type={"password"} placeholder={passwordPlaceholder} customClass={"login-page-form-input-no-margin"}/>
+                <a href="/forgotten-password" use:link class="login-page-form-link">{passwordForgotten}</a>
+                <Button label={loginLabel} onClick={onLoginButtonClick} customClass="extra-margin-top"/>
+            </form>
+        </div>
+
+        <div class="login-page-no-account-container">
+            <p class="login-page-no-account-sentence">{noAccount}</p>
+            <Button label={createAccount} onClick={onCreateAccountButtonClick} isCTA />
+        </div>
+
+        <footer class="login-page-footer">
+            <a href="/gcu" use:link class="login-page-footer-link">{gcuLabel}</a>
+            <p class="login-page-footer-content">© Pawbook 2024 - 2025</p>
+            <p class="login-page-footer-content">All rights reserved</p>
+          </footer>
+    </main>
+
+<style lang="scss">
+    #login-page-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .language-dropdown-container {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+    }
+
+    .login-page {
+        &-logo {
+            width: 18rem;
+            height: 18rem;
+            margin: 0;
+        }
+
+        &-title {
+            font-family: var(--title-font-family);
+            text-align: center;
+            font-size: 3.5rem;
+            margin: 0;
+        }
+
+        &-form-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--second-background-color);
+            border-radius: 0.75rem;
+            margin: 2rem 0 2rem 0;
+            padding : 1.5rem 2.5rem 1rem 2.5rem;
+            width: 90%;
+            max-width: 40rem;
+            
+        }
+
+        &-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+
+            &-link {
+                font-size: 0.8rem;
+                text-decoration: underline;
+                cursor: pointer;
+
+                &:hover {
+                    color: var(--second-highlight-color);
+                }
+            }
+        }
+
+        &-no-account {
+            &-container {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin: 0;
+            }
+
+            &-sentence {
+                font-size: 0.9rem;
+                margin: 0 0 0.3rem 0;
+            }       
+        } 
+
+        &-footer {
+            position: absolute;
+            bottom: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size: 0.8rem;
+            padding: 0 0 0.5rem 0;
+
+            &-content {
+            margin: 0;
+            }
+
+            &-link {
+                font-size: 0.8rem;
+                text-decoration: underline;
+                cursor: pointer;
+                margin-bottom: 0.2rem;
+
+                &:hover {
+                    color: var(--second-highlight-color);
+                }
+            }
+        }
+    }
+
+    :global(.extra-margin-top) {
+        margin-top: 1rem;
+    }
+
+    :global(.login-page-form-input-no-margin) {
+        margin-bottom: 0.3rem !important;
+    }
+</style>

@@ -1,11 +1,25 @@
 {
-  "$schema": "https://inlang.com/schema/inlang-message-format",
+    "$schema": "https://inlang.com/schema/inlang-message-format",
 
-  "website_catchphrase": "Das erste soziale Netzwerk für Tierliebhaber",
+    "website_catchphrase": "Das erste soziale Netzwerk für Tierliebhaber",
 
-  "website_language": "Sprache",
+    "website_language": "Sprache",
+    "email": "E-Mail",
+    "email_placholder": "Geben Sie Ihre E-Mail Adresse ein",
+    "password": "Passwort",
+    "password_placeholder": "Geben Sie Ihr Passwort ein",
+    "confirm_password": "Bestätigen Sie das Passwort",
+    "confirm_password_placeholder": "Bestätigen Sie Ihr Passwort",
+    "username": "Benutzername",
+    "first_name": "Vornamen",
+    "last_name": "Nachname",
 
-  "home_connection": "Sich anmelden",
-  "home_inscription": "Ein Konto erstellen", 
-  "home_gcu": "Allgemeine Nutzungsbedingungen"
+    "home_connection": "Sich anmelden",
+    "home_inscription": "Ein Konto erstellen", 
+    "home_gcu": "Allgemeine Nutzungsbedingungen",
+
+    "login_connexion": "Verbindung",
+    "login_forgotten_password": "Haben Sie Ihr Passwort vergessen?",
+    "login_no_account": "Kein Konto?",
+    "login_create_account": "Ein Konto erstellen"
 }

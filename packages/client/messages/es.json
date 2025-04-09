@@ -4,8 +4,22 @@
     "website_catchphrase": "La primera red social para amantes de los animales",
 
     "website_language": "Idioma",
+    "email": "Correo electrónico",
+    "email_placholder": "Introduzca su dirección de correo electrónico",
+    "password": "Contraseña",
+    "password_placeholder": "Introduzca su contraseña",
+    "confirm_password": "Confirmar contraseña",
+    "confirm_password_placeholder": "Confirme su contraseña",
+    "username": "Nombre de usuario",
+    "first_name": "Nombre",
+    "last_name": "Apellido",
 
     "home_connection": "Iniciar sesión",
     "home_inscription": "Crear una cuenta", 
-    "home_gcu": "Condiciones de uso"
+    "home_gcu": "Condiciones de uso",
+
+    "login_connexion": "Conexión",
+    "login_forgotten_password": "¿Ha olvidado su contraseña?",
+    "login_no_account": "¿No tiene cuenta?",
+    "login_create_account": "Crear una cuenta"
 }

@@ -4,8 +4,22 @@
     "website_catchphrase": "Il primo social network per gli amanti degli animali",
 
     "website_language": "Lingua",
+    "email": "Email",
+    "email_placholder": "Inserire l'indirizzo e-mail",
+    "password": "Password",
+    "password_placeholder": "Inserire la password",
+    "confirm_password": "Confermare la password",
+    "confirm_password_placeholder": "Confermare la password",
+    "username": "Nome utente",
+    "first_name": "Nome",
+    "last_name": "Cognome",
 
     "home_connection": "Accedi",
     "home_inscription": "Creare un account", 
-    "home_gcu": "Termini e condizioni d'uso"
+    "home_gcu": "Termini e condizioni d'uso",
+
+    "login_connexion": "Connessione",
+    "login_forgotten_password": "Avete dimenticato la password?",
+    "login_no_account": "Nessun conto?",
+    "login_create_account": "Creare un account"
 }
