@@ -6,8 +6,8 @@
     import LanguageDropdown from "$assets/components/LanguageDropdown.svelte";
     import Button from "$assets/components/Button.svelte";
     import * as messages from "$lib/paraglide/messages";
-    import { app } from "$stores/stores.svelte";
-    import logo from "$public/logo.png";
+    import { link, push } from "svelte-spa-router";
+    import logo from "/logo.png";
   
     const catchphraseLabel = messages.website_catchphrase();
     const connectionLabel = messages.home_connection();
@@ -15,16 +15,16 @@
     const gcuLabel = messages.home_gcu();
 
     function onConnectionButtonClick() {
-        app.activeLocale = "en";
+        push("/login");
     }
 
     function onInscriptionButtonClick() {
-        app.activeLocale = "fr";
+        push("/signup");
     }
     
   </script>
   
-  <div class="home-container">
+  <main class="home-container">
     <div class="language-dropdown-container">
       <LanguageDropdown />
     </div>
@@ -33,12 +33,12 @@
     <p class="home-catchphrase">{catchphraseLabel}</p>
     <Button label={inscriptionLabel} onClick={onInscriptionButtonClick} customClass="extra-margin" isCTA/>
     <Button label={connectionLabel} onClick={onConnectionButtonClick} />
-    <div class="home-footer">
-      <a href="/gcu" class="home-footer-link">{gcuLabel}</a>
+    <footer class="home-footer">
+      <a href="/gcu" use:link class="home-footer-link">{gcuLabel}</a>
       <p class="home-footer-content">© Pawbook 2024 - 2025</p>
       <p class="home-footer-content">All rights reserved</p>
-    </div>
-  </div>
+    </footer>
+  </main>
   
   <style lang="scss">
     .home {
@@ -86,6 +86,10 @@
           text-decoration: underline;
           cursor: pointer;
           margin-bottom: 0.2rem;
+
+          &:hover {
+              color: var(--second-highlight-color);
+          }
         }
       }
     }
