@@ -29,7 +29,7 @@
         height: 2.5rem;
         border-radius: 0.375rem;
         border: 1px solid var(--color-main-dark);
-        background-color: #FFFFFF;
+        background-color: rgba(255, 255, 255, 0.5);
         color: var(--main-text-color);
         font-size: 1rem;
         font-weight: bold;
