@@ -10,6 +10,7 @@
     import Input from "$assets/components/Input.svelte";
     import { link, push } from "svelte-spa-router";
     import logo from "/logo.png";
+    import paws from "/paws.png";
 
     const backButtonLabel = messages.forgotten_password_back_button();
     const emailLabel = messages.email();
@@ -31,6 +32,9 @@
         <div class="language-dropdown-container">
             <LanguageDropdown />
         </div>
+
+        <div class="reset-password-page-background"></div>
+
         <img alt="PawBook Logo" class="reset-password-page-logo" src={logo} />
         <h1 class="reset-password-page-title">Pawbook</h1>
 
@@ -69,6 +73,20 @@
             width: 18rem;
             height: 18rem;
             margin: 0;
+        }
+
+        &-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('/paws.png');
+            background-size: 68rem auto;
+            background-position: center;
+            background-repeat: no-repeat;
+            z-index: -2;
+            opacity: 0.2;
         }
 
         &-title {

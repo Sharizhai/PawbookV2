@@ -9,6 +9,7 @@
     import Input from "$assets/components/Input.svelte";
     import { link, push } from "svelte-spa-router";
     import logo from "/logo.png";
+    import paws from "/paws.png";
 
     const emailLabel = messages.email();
     const emailPlaceholder = messages.email_placholder();
@@ -34,6 +35,9 @@
         <div class="language-dropdown-container">
             <LanguageDropdown />
         </div>
+
+        <div class="login-page-background"></div>
+
         <img alt="PawBook Logo" class="login-page-logo" src={logo} />
         <h1 class="login-page-title">Pawbook</h1>
 
@@ -74,6 +78,20 @@
     }
 
     .login-page {
+        &-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('/paws.png');
+            background-size: 68rem auto;
+            background-position: center;
+            background-repeat: no-repeat;
+            z-index: -2;
+            opacity: 0.2;
+        }
+
         &-logo {
             width: 18rem;
             height: 18rem;

@@ -8,6 +8,7 @@
     import * as messages from "$lib/paraglide/messages";
     import { link, push } from "svelte-spa-router";
     import logo from "/logo.png";
+    import paws from "/paws.png";
   
     const catchphraseLabel = messages.website_catchphrase();
     const connectionLabel = messages.home_connection();
@@ -28,9 +29,13 @@
     <div class="language-dropdown-container">
       <LanguageDropdown />
     </div>
+
+    <div class="home-background"></div>
+
     <img alt="PawBook Logo" class="home-logo" src={logo} />
     <h1 class="home-title">Pawbook</h1>
     <p class="home-catchphrase">{catchphraseLabel}</p>
+
     <Button label={inscriptionLabel} onClick={onInscriptionButtonClick} customClass="extra-margin" isCTA/>
     <Button label={connectionLabel} onClick={onConnectionButtonClick} />
     <footer class="home-footer">
@@ -47,6 +52,21 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        overflow: hidden;
+      }
+
+      &-background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url('/paws.png');
+        background-size: 68rem auto;
+        background-position: center;
+        background-repeat: no-repeat;
+        z-index: -2;
+        opacity: 0.2;
       }
 
       &-logo {
