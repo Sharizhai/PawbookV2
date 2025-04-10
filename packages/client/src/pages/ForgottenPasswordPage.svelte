@@ -1,37 +1,142 @@
 <svelte:head>
-  <title>Pawbook GCU</title>
+  <title>Pawbook forgotten password</title>
 </svelte:head>
 
 <script lang="ts">
     import LanguageDropdown from "$assets/components/LanguageDropdown.svelte";
+    import BackButton from "$assets/components/BackButton.svelte";
+    import Button from "$assets/components/Button.svelte";
+    import * as messages from "$lib/paraglide/messages";
+    import Input from "$assets/components/Input.svelte";
+    import { link, push } from "svelte-spa-router";
+    import logo from "/logo.png";
+
+    const backButtonLabel = messages.forgotten_password_back_button();
+    const emailLabel = messages.email();
+    const emailPlaceholder = messages.email_placholder();
+    const passwordResetLabel = messages.forgotten_password_reset();
+    const gcuLabel = messages.home_gcu();
+
+    function onPasswordResetButtonClick() {
+        // TODO : Implement login logic
+    }
+
+    function onBackButtonClick() {
+        push("/login");
+    }
 
 </script>
 
-<main class="forgotten-password-page-container">
-    <div class="language-dropdown-container">
-        <LanguageDropdown />
-    </div>
-    <h1 class="forgotten-password-page-title">Forgotten password</h1>
-</main>
+    <main id="reset-password-page-container">
+        <div class="language-dropdown-container">
+            <LanguageDropdown />
+        </div>
+        <img alt="PawBook Logo" class="reset-password-page-logo" src={logo} />
+        <h1 class="reset-password-page-title">Pawbook</h1>
+
+        <div class="reset-password-page-form-container">
+            <form class="reset-password-page-form">
+                <BackButton customClass="back-button" onClick={onBackButtonClick} label={backButtonLabel}/>
+                <Input label={emailLabel} type={"email"} placeholder={emailPlaceholder}/>
+                <Button label={passwordResetLabel} onClick={onPasswordResetButtonClick} customClass="extra-margin-top" isCTA/>
+            </form>
+        </div>
+
+        <footer class="reset-password-page-footer">
+            <a href="/gcu" use:link class="reset-password-page-footer-link">{gcuLabel}</a>
+            <p class="reset-password-page-footer-content">© Pawbook 2024 - 2025</p>
+            <p class="reset-password-page-footer-content">All rights reserved</p>
+          </footer>
+    </main>
 
 <style lang="scss">
-    .forgotten-password-page-container {
+    #reset-password-page-container {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         width: 100%;
-        height: 100vh;
-    } 
-       
-    .forgotten-password-page-title {
-        font-size: 2rem;
-        margin-bottom: 2rem;
     }
-    
+
     .language-dropdown-container {
       position: absolute;
       top: 1rem;
       right: 1rem;
+    }
+
+    .reset-password-page {
+        &-logo {
+            width: 18rem;
+            height: 18rem;
+            margin: 0;
+        }
+
+        &-title {
+            font-family: var(--title-font-family);
+            text-align: center;
+            font-size: 3.5rem;
+            margin: 0;
+        }
+
+        &-form-container {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid var(--second-text-color);
+            border-radius: 0.75rem;
+            margin: 2rem 0 2rem 0;
+            padding : 4.25rem 1.25rem 1.25rem 1.25rem;
+            width: 90%;
+            max-width: 40rem;   
+        }
+
+        &-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+
+        &-footer {
+            position: absolute;
+            bottom: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size: 0.8rem;
+            padding: 0 0 0.5rem 0;
+
+            &-content {
+            margin: 0;
+            }
+
+            &-link {
+                font-size: 0.8rem;
+                text-decoration: underline;
+                cursor: pointer;
+                margin-bottom: 0.2rem;
+
+                &:hover {
+                    color: var(--second-highlight-color);
+                }
+            }
+        }
+    }
+
+    :global(.back-button) {
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+    }
+
+    :global(.extra-margin-top) {
+        margin-top: 1rem;
+    }
+
+    :global(.reset-password-page-form-input-no-margin) {
+        margin-bottom: 0.3rem !important;
     }
 </style>

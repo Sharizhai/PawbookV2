@@ -21,5 +21,8 @@
     "login_connexion": "Conexión",
     "login_forgotten_password": "¿Ha olvidado su contraseña?",
     "login_no_account": "¿No tiene cuenta?",
-    "login_create_account": "Crear una cuenta"
+    "login_create_account": "Crear una cuenta",
+
+    "forgotten_password_reset": "Restablecer mi contraseña",
+    "forgotten_password_back_button": "Volver a la página de inicio de sesión"
 }
