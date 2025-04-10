@@ -92,13 +92,12 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            background-color: var(--second-background-color);
+            border: 1px solid var(--second-text-color);
             border-radius: 0.75rem;
             margin: 2rem 0 2rem 0;
-            padding : 1.5rem 2.5rem 1rem 2.5rem;
+            padding : 1.25rem;
             width: 90%;
-            max-width: 40rem;
-            
+            max-width: 40rem;   
         }
 
         &-form {
