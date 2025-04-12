@@ -107,7 +107,8 @@
             margin: 2rem 0 2rem 0;
             padding : 4.25rem 1.25rem 1.25rem 1.25rem;
             width: 90%;
-            max-width: 40rem;   
+            max-width: 40rem;
+            backdrop-filter: blur(3px);
         }
 
         &-form {
