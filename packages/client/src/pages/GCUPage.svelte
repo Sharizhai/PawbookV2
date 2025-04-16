@@ -3,7 +3,7 @@
 </svelte:head>
 
 <script lang="ts">
-    import LanguageDropdown from "$assets/components/LanguageDropdown.svelte";
+    import LanguageDropdown from "$components/LanguageDropdown.svelte";
 
 </script>
 

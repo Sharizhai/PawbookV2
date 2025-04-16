@@ -3,8 +3,8 @@
 </svelte:head>
 
 <script lang="ts">
-    import LanguageDropdown from "$assets/components/LanguageDropdown.svelte";
-    import Button from "$assets/components/Button.svelte";
+    import LanguageDropdown from "$components/LanguageDropdown.svelte";
+    import Button from "$components/Button.svelte";
     import * as messages from "$lib/paraglide/messages";
     import { link, push } from "svelte-spa-router";
     import logo from "/logo.png";

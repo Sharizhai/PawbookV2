@@ -23,6 +23,7 @@ export default defineConfig({
       $services: path.resolve("./src/services"),
       $stores: path.resolve("./src/stores"),
       $utils: path.resolve("./src/utils"),
+      $components: path.resolve("./src/components"),
     }
   }
 });
