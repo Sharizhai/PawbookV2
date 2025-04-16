@@ -3,11 +3,11 @@
 </svelte:head>
 
 <script lang="ts">
-    import LanguageDropdown from "$assets/components/LanguageDropdown.svelte";
-    import BackButton from "$assets/components/BackButton.svelte";
-    import Button from "$assets/components/Button.svelte";
+    import LanguageDropdown from "src/components/LanguageDropdown.svelte";
+    import BackButton from "src/components/BackButton.svelte";
+    import Button from "src/components/Button.svelte";
     import * as messages from "$lib/paraglide/messages";
-    import Input from "$assets/components/Input.svelte";
+    import Input from "src/components/Input.svelte";
     import { link, push } from "svelte-spa-router";
     import logo from "/logo.png";
     import paws from "/paws.png";
@@ -41,7 +41,7 @@
         <div class="reset-password-page-form-container">
             <form class="reset-password-page-form">
                 <BackButton customClass="back-button" onClick={onBackButtonClick} label={backButtonLabel}/>
-                <Input label={emailLabel} type={"email"} placeholder={emailPlaceholder}/>
+                <Input label={emailLabel} type={"email"} name={"email"} placeholder={emailPlaceholder}/>
                 <Button label={passwordResetLabel} onClick={onPasswordResetButtonClick} customClass="extra-margin-top" isCTA/>
             </form>
         </div>
