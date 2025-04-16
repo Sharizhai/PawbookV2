@@ -30,5 +30,6 @@
     }
   },
   "include": ["src/**/*.ts", "src/**/*.js", "src/**/*.svelte"],
+  "exclude": ["src/lib/paraglide/**"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
