@@ -5,6 +5,8 @@
     "dev:client": "pnpm --filter pawbook-client dev",
     "dev:server": "pnpm --filter pawbook-server dev",
     "dev": "concurrently \"pnpm dev:client\" \"pnpm dev:server\"",
+    "test": "vitest run",
+    "test:watch": "vitest",
     "build:client": "pnpm --filter pawbook-client build",
     "build:server": "pnpm --filter pawbook-server build",
     "start:server": "pnpm --filter pawbook-server start"
@@ -16,9 +18,13 @@
     "@sveltejs/vite-plugin-svelte": "^5.0.3",
     "@types/cors": "^2.8.17",
     "@types/node": "^22.13.14",
+    "@vitest/coverage-v8": "^3.1.1",
+    "@vitest/ui": "^3.1.1",
     "concurrently": "^9.1.2",
     "svelte-preprocess": "^6.0.3",
-    "vite": "^6.2.3"
+    "tsx": "^4.19.3",
+    "vite": "^6.2.3",
+    "vitest": "^3.1.1"
   },
   "dependencies": {
     "sass": "^1.86.3"
