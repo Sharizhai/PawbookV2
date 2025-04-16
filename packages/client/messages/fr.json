@@ -24,5 +24,16 @@
     "login_create_account": "Créer un compte",
 
     "forgotten_password_reset": "Réinitialiser mon mot de passe",
-    "forgotten_password_back_button": "Retour à la page de connexion"
+    "forgotten_password_back_button": "Retour à la page de connexion",
+
+    "signup_incentive": "Rejoignez Pawbook et partagez la vie de votre animal avec une communauté qui vous ressemble.",
+    "signup_already_have_account": "Déjà un compte ?",
+    "signup_create_account": "Créer mon compte",
+    "signup_email_placeholder": "Votre e-mail",
+    "signup_password_placeholder": "Votre mot de passe",
+    "signup_confirm_password_placeholder": "Confirmez votre mot de passe",
+    "signup_username_placeholder": "Votre nom d'utilisateur",
+    "signup_first_name_placeholder": "Votre prénom",
+    "signup_last_name_placeholder": "Votre nom",
+    "signup_gcu_privacy_policy": "En créant votre compte, vous reconnaissez avoir lu et accepté nos CGU ainsi que notre Politique de confidentialité."
 }
