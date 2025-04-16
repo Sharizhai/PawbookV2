@@ -4,14 +4,14 @@ import "@testing-library/jest-dom";
 import Button from "$components/Button.svelte";
 
 test("Should render with the good label", () => {
-  const { getByText } = render(Button, { props: { label: "Clique moi", onClick: () => {} } });
-  expect(getByText("Clique moi")).toBeInTheDocument();
+  const { getByText } = render(Button, { props: { label: "Click", onClick: () => {} } });
+  expect(getByText("Click")).toBeInTheDocument();
 });
 
 test("onClick should run properly", async () => {
   const handleClick = vi.fn();
-  const { getByText } = render(Button, { props: { label: "Clique moi", onClick: handleClick } });
-  await fireEvent.click(getByText("Clique moi"));
+  const { getByText } = render(Button, { props: { label: "Click", onClick: handleClick } });
+  await fireEvent.click(getByText("Click"));
   expect(handleClick).toHaveBeenCalled();
 });
 
