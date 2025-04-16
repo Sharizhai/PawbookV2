@@ -1,8 +1,7 @@
 import { paraglideVitePlugin } from '@inlang/paraglide-js'
-import { defineConfig } from "vite";
 import { svelte } from "@sveltejs/vite-plugin-svelte";
 import sveltePreprocess from "svelte-preprocess";
-
+import { defineConfig } from "vitest/config";
 import path from "path";
 
 export default defineConfig({
@@ -12,8 +11,16 @@ export default defineConfig({
             paraglideVitePlugin({ 
               project: './project.inlang', 
               outdir: './src/lib/paraglide' 
-            }),
-  ], 
+            })
+  ],
+  test: {
+    globals: true,
+    environment: 'jsdom',
+    include: ['src/**/*.test.ts'],
+    coverage: {
+      reporter: ['text', 'json', 'html'],
+    }
+  },
   resolve: {
     alias: {
       $public: path.resolve("./public"),
@@ -24,6 +31,6 @@ export default defineConfig({
       $stores: path.resolve("./src/stores"),
       $utils: path.resolve("./src/utils"),
       $components: path.resolve("./src/components"),
-    }
+    },
   }
 });
