@@ -7,6 +7,7 @@
     "test": "vitest run",
     "watch": "vitest --watch",
     "coverage": "vitest run --coverage",
+    "report-coverage": "codecov",
     "build": "pnpm run compile-localization && paraglide-js compile --project ./project.inlang --outdir ./src/paraglide && vite build",
     "compile-localization": "paraglide-js compile --project ./project.inlang --outdir ./src/lib/paraglide",
     "machine-translate": "inlang machine translate --project project.inlang"
@@ -22,6 +23,7 @@
     "@testing-library/svelte": "^5.2.7",
     "@tsconfig/svelte": "^5.0.4",
     "@vitest/coverage-istanbul": "^3.1.1",
+    "codecov": "^3.8.3",
     "esbuild": "^0.25.2",
     "jsdom": "^26.1.0",
     "svelte": "^5.25.3",

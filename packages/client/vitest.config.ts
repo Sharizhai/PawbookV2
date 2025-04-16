@@ -19,7 +19,13 @@ export default defineConfig(({ mode }) =>({
     ],
     coverage: {
       reporter: ["text", "json", "html"],
-      provider: 'istanbul'
+      provider: 'istanbul',
+      exclude: [
+        'src/lib/paraglide/**',
+        'src/paraglide/**',
+        'node_modules/**',
+        '**/*.d.ts',
+      ]
     },
     watch: false,
     setupFiles: ["./setup-tests.ts"],
