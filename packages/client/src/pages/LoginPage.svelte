@@ -3,10 +3,10 @@
 </svelte:head>
 
 <script lang="ts">
-    import LanguageDropdown from "$assets/components/LanguageDropdown.svelte";
-    import Button from "$assets/components/Button.svelte";
+    import LanguageDropdown from "src/components/LanguageDropdown.svelte";
+    import Button from "src/components/Button.svelte";
     import * as messages from "$lib/paraglide/messages";
-    import Input from "$assets/components/Input.svelte";
+    import Input from "src/components/Input.svelte";
     import { link, push } from "svelte-spa-router";
     import logo from "/logo.png";
     import paws from "/paws.png";
@@ -43,8 +43,8 @@
 
         <div class="login-page-form-container">
             <form class="login-page-form" action="/login" method="POST">
-                <Input label={emailLabel} type={"email"} placeholder={emailPlaceholder}/>
-                <Input label={passwordLabel} type={"password"} placeholder={passwordPlaceholder} customClass={"login-page-form-input-no-margin"}/>
+                <Input label={emailLabel} type={"email"} name={"email"} placeholder={emailPlaceholder}/>
+                <Input label={passwordLabel} type={"password"} name={"password"} placeholder={passwordPlaceholder} customClass={"login-page-form-input-no-margin"}/>
                 <a href="/forgotten-password" use:link class="login-page-form-link">{passwordForgotten}</a>
                 <Button label={loginLabel} onClick={onLoginButtonClick} customClass="extra-margin-top"/>
             </form>
