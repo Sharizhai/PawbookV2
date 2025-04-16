@@ -19,6 +19,7 @@ export default defineConfig(({ mode }) =>({
     ],
     coverage: {
       reporter: ["text", "json", "html"],
+      provider: 'istanbul'
     },
     watch: false,
     setupFiles: ["./setup-tests.ts"],
