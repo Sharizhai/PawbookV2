@@ -3,7 +3,9 @@
     "compilerOptions": {
       "outDir": "./dist",
       "module": "commonjs",
-      "rootDir": "./src"
+      "rootDir": "./src",
+      "esModuleInterop": true,
+      "allowSyntheticDefaultImports": true
     },
     "include": ["src/**/*.ts"]
   }

@@ -1,12 +1,12 @@
-{
-    "compilerOptions": {
-      "target": "ES2022",
-      "module": "nodenext",
-      "moduleResolution": "nodenext", 
-      "types": ["vitest"], 
-      "strict": true,
-      "esModuleInterop": true,
-      "skipLibCheck": true,
-      "forceConsistentCasingInFileNames": true
-    }
-  }
+// {
+//     "compilerOptions": {
+//       "target": "ES2022",
+//       "module": "nodenext",
+//       "moduleResolution": "nodenext", 
+//       "types": ["vitest"], 
+//       "strict": true,
+//       "esModuleInterop": true,
+//       "skipLibCheck": true,
+//       "forceConsistentCasingInFileNames": true
+//     }
+//   }
