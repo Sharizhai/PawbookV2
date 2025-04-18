@@ -1,7 +1,7 @@
 import { test, expect, vi } from "vitest";
 import { render, fireEvent } from "@testing-library/svelte";
 import LanguageDropdown from "$components/LanguageDropdown.svelte";
-import { app } from '$stores/stores.svelte';
+import { app } from "../../src/stores/stores.svelte";
 
 test("opens and closes the dropdown", async () => {
     const { getByRole, queryByText } = render(LanguageDropdown);
