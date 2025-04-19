@@ -1,19 +1,14 @@
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": {
+    "outDir": "./dist",
     "target": "ESNext",
     "useDefineForClassFields": true,
     "module": "ESNext",
-    "moduleResolution": "node", 
+    "moduleResolution": "node",
     "resolveJsonModule": true,
     "esModuleInterop": true,
     "verbatimModuleSyntax": true,
-    /**
-     * Typecheck JS in `.svelte` and `.js` files by default.
-     * Disable checkJs if you'd like to use dynamic types in JS.
-     * Note that setting allowJs false does not prevent the use
-     * of JS in `.svelte` files.
-     */
     "allowJs": true,
     "checkJs": true,
     "isolatedModules": true,
@@ -27,10 +22,10 @@
       "$services/*": ["src/services/*"],
       "$stores/*": ["src/stores/*"],
       "$utils/*": ["src/utils/*"],
-      "$components/*": ["src/components/*"],
+      "$components/*": ["src/components/*"]
     }
   },
   "include": ["src/**/*.ts", "src/**/*.js", "src/**/*.svelte"],
-  "exclude": ["src/lib/paraglide/**"],
+  "exclude": ["src/lib/paraglide/**", "./dist/**/*"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
