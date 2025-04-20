@@ -4,9 +4,11 @@
   import Router from "svelte-spa-router";
   import { onMount } from "svelte";
 
+  // import PawCursor from 'src/components/PawCursor.svelte';
+
   import ForgottenPasswordPage from "$pages/ForgottenPasswordPage.svelte";
   import AccountCreationPage from "$pages/AccountCreationPage.svelte";
-  // import PawCursor from 'src/components/PawCursor.svelte';
+  import ProfilePage from "$pages/ProfilePage.svelte";
   import LoginPage from "$pages/LoginPage.svelte";
   import HomePage from "$pages/HomePage.svelte";
   import FeedPage from "$pages/FeedPage.svelte";
@@ -19,6 +21,7 @@
     "/signup": AccountCreationPage,
     "/forgotten-password": ForgottenPasswordPage,
     "/feed": FeedPage,
+    "/profile": ProfilePage,
   };
  
   onMount(() => {

@@ -1,5 +1,5 @@
 <svelte:head>
-  <title>Pawbook Feed</title>
+  <title>Pawbook Profile</title>
 </svelte:head>
 
 <script lang="ts">
@@ -7,15 +7,15 @@
     import Navbar from "$components/Navbar/Navbar.svelte";
 </script>
 
-    <main id="feed-page-container">
-        <div class="feed-page-background"></div>
-        <h2 class="profile-page-title">Feed</h2>
+    <main id="profile-page-container">
+        <div class="profile-page-background"></div>
         <NavHeader />
+        <h2 class="profile-page-title">Profile</h2>
         <Navbar />
     </main>
 
 <style lang="scss">
-    #feed-page-container {
+    #profile-page-container {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -24,7 +24,7 @@
         height: 100vh;
     }
 
-    .feed-page {
+    .profile-page {
         &-background {
             position: fixed;
             top: 0;
