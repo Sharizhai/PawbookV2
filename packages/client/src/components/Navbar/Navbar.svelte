@@ -1,5 +1,8 @@
 <script lang="ts">
     import * as messages from "$lib/paraglide/messages";
+    import NavbarButton from "./NavbarButton.svelte";
+    import { push } from "svelte-spa-router";
+    import logo from "/logo.png";
 
     import notificationIcon from "$assets/icons/navbar/notification.svg?raw";
     import profileIcon from "$assets/icons/navbar/profile.svg?raw";
@@ -7,9 +10,6 @@
     import menuIcon from "$assets/icons/navbar/menu.svg?raw";
     import homeIcon from "$assets/icons/navbar/home.svg?raw";
     import addIcon from "$assets/icons/navbar/add.svg?raw";
-    
-    import NavbarButton from "./NavbarButton.svelte";
-    import logo from "/logo.png";
 
     const notificationLabel = messages.navbar_notifications();
     const profileLabel = messages.navbar_profile();
@@ -19,8 +19,7 @@
     const addLabel = messages.navbar_add();
 
     function onHomeButtonClick() {
-        // Handle home button click
-        console.log("Home button clicked");
+        push("/feed");
     }
 
     function onSearchButtonClick() {
@@ -39,8 +38,7 @@
     }
 
     function onProfileButtonClick() {
-        // Handle profile button click
-        console.log("Profile button clicked");
+        push("/profile");
     }
 
     function onMenuButtonClick() {
