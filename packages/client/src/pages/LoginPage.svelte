@@ -9,7 +9,6 @@
     import Input from "$components/Input.svelte";
     import { link, push } from "svelte-spa-router";
     import logo from "/logo.png";
-    import paws from "/paws.png";
 
     const emailLabel = messages.email();
     const emailPlaceholder = messages.email_placholder();
@@ -22,7 +21,7 @@
     const gcuLabel = messages.home_gcu();
 
     function onLoginButtonClick() {
-        // TODO : Implement login logic
+        push("/feed");
     }
 
     function onCreateAccountButtonClick() {

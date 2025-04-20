@@ -3,12 +3,14 @@
   import { app } from "$stores/stores.svelte";
   import Router from "svelte-spa-router";
   import { onMount } from "svelte";
-  
+
   import ForgottenPasswordPage from "$pages/ForgottenPasswordPage.svelte";
   import AccountCreationPage from "$pages/AccountCreationPage.svelte";
-  import LoginPage from "./pages/LoginPage.svelte";
-  import HomePage from "./pages/HomePage.svelte";
-  import GcuPage from "./pages/GCUPage.svelte";
+  // import PawCursor from 'src/components/PawCursor.svelte';
+  import LoginPage from "$pages/LoginPage.svelte";
+  import HomePage from "$pages/HomePage.svelte";
+  import FeedPage from "$pages/FeedPage.svelte";
+  import GcuPage from "$pages/GCUPage.svelte";
   
   const routes = {
     "/": HomePage,
@@ -16,6 +18,7 @@
     "/login": LoginPage,
     "/signup": AccountCreationPage,
     "/forgotten-password": ForgottenPasswordPage,
+    "/feed": FeedPage,
   };
  
   onMount(() => {
@@ -28,3 +31,4 @@
 </script>
 
 <Router {routes} />
+<!-- <PawCursor /> -->
