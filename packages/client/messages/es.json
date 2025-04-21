@@ -42,5 +42,7 @@
     "navbar_add": "Publicar",
     "navbar_notifications": "Notificaciones",
     "navbar_profile": "Perfil",
-    "navbar_menu": "Menú"
+    "navbar_menu": "Menú",
+
+    "post_comment": "Comentar"
 }

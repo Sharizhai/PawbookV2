@@ -4,13 +4,25 @@
 
 <script lang="ts">
     import NavHeader from "$components/Navbar/NavHeader.svelte";
+    import PostCard from "$components/PostCard.svelte";
     import Navbar from "$components/Navbar/Navbar.svelte";
 </script>
 
     <main id="feed-page-container">
         <div class="feed-page-background"></div>
-        <h2 class="profile-page-title">Feed</h2>
         <NavHeader />
+
+        <div class="feed-page-postcard-container">
+            <PostCard />
+            <PostCard />
+            <PostCard />
+            <PostCard />
+            <PostCard />
+            <PostCard />
+            <PostCard />
+            <PostCard />
+        </div>
+
         <Navbar />
     </main>
 
@@ -18,10 +30,14 @@
     #feed-page-container {
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
         width: 100%;
         height: 100vh;
+        padding: 70px 5px 0 5px;
+        overflow-y: auto;
+        overflow-x: hidden;
+        position: relative;
     }
 
     .feed-page {
@@ -37,6 +53,17 @@
             background-repeat: no-repeat;
             z-index: -2;
             opacity: 0.2;
+        }
+
+        &-postcard-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            width: 100%;
+            max-width: 40rem;
+            margin-bottom: 80px;
+            box-sizing: border-box;
         }
     }
 </style>

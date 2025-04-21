@@ -42,5 +42,7 @@
     "navbar_add": "Post",
     "navbar_notifications": "Notifications",
     "navbar_profile": "Profile",
-    "navbar_menu": "Menu"
+    "navbar_menu": "Menu",
+
+    "post_comment": "Comment"
 }
