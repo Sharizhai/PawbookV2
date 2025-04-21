@@ -1,5 +1,5 @@
 <script lang="ts">
-    import NavbarButton from "$components/Navbar/NavbarButton.svelte";
+    import NavbarButton from "$components/navbar/NavbarButton.svelte";
     import menuIcon from "$assets/icons/navbar/menu.svg?raw";
     import * as messages from "$lib/paraglide/messages";
     import logo from "/logo.png";

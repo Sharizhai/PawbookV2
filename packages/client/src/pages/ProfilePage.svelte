@@ -3,7 +3,7 @@
 </svelte:head>
 
 <script lang="ts">
-    import Navbar from "$components/Navbar/Navbar.svelte";
+    import Navbar from "$components/navbar/Navbar.svelte";
 </script>
 
     <main id="profile-page-container">

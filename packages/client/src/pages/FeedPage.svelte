@@ -3,9 +3,9 @@
 </svelte:head>
 
 <script lang="ts">
-    import NavHeader from "$components/Navbar/NavHeader.svelte";
-    import PostCard from "$components/PostCard.svelte";
-    import Navbar from "$components/Navbar/Navbar.svelte";
+    import NavHeader from "$components/navbar/NavHeader.svelte";
+    import PostCard from "$components/post/PostCard.svelte";
+    import Navbar from "$components/navbar/Navbar.svelte";
 </script>
 
     <main id="feed-page-container">

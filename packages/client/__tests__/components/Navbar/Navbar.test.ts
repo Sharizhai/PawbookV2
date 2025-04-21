@@ -1,7 +1,7 @@
 import { test, expect, vi } from "vitest";
 import { render, fireEvent } from "@testing-library/svelte";
 import "@testing-library/jest-dom";
-import Navbar from "$components/Navbar/Navbar.svelte";
+import Navbar from "$components/navbar/Navbar.svelte";
 
 vi.mock("svelte-spa-router", () => ({
     push: vi.fn()
