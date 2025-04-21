@@ -50,7 +50,7 @@
     <nav id="navbar-container">
 
         <div class="navbar-logo-container">
-            <img alt="PawBook Logo" class="navbar-logo" src={logo} />
+            <img alt="Pawbook Logo" class="navbar-logo" src={logo} />
             <h1 class="navbar-logo-title">PawBook</h1>
         </div>
 
