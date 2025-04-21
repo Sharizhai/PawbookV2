@@ -15,7 +15,7 @@
 <header class="feed-header">
     <div class="feed-header-logo-container">
         <img alt="PawBook Logo" class="feed-header-logo" src={logo} />
-        <h1 class="feed-header-logo-title">PawBook</h1>
+        <h1 class="feed-header-logo-title">Pawbook</h1>
     </div>
     
     <div class="feed-header-more-container">

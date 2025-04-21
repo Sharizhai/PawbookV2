@@ -3,13 +3,11 @@
 </svelte:head>
 
 <script lang="ts">
-    import NavHeader from "$components/Navbar/NavHeader.svelte";
     import Navbar from "$components/Navbar/Navbar.svelte";
 </script>
 
     <main id="profile-page-container">
         <div class="profile-page-background"></div>
-        <NavHeader />
         <h2 class="profile-page-title">Profile</h2>
         <Navbar />
     </main>
