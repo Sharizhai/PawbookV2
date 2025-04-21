@@ -1,21 +1,14 @@
 <script lang="ts">
     import SettingsButton from "$components/SettingsButton.svelte";
+    import LikeButton from "$components/post/LikeButton.svelte";
     import * as messages from "$lib/paraglide/messages";
 
-    import filledLikeIcon from "$assets/icons/posts/like-fill.svg?raw";
     import commentIcon from "$assets/icons/posts/comment.svg?raw";
-    import likeIcon from "$assets/icons/posts/like.svg?raw";
 
     const commentLabel = messages.post_comment();
 
-    let isLikedBeMe = $state(false);
-
     function onSettingsButtonClick() {
         console.log("Settings button clicked!");
-    }
-
-    function onLikeButtonClick() {
-        isLikedBeMe = !isLikedBeMe;
     }
 
     function onCommentButtonClick() {
@@ -38,10 +31,7 @@
         </div>
 
         <div class="postcard-buttons-container">
-            <button class="postcard-button postcard-like-button" onclick={onLikeButtonClick}>
-                <span class="postcard-button-icon {isLikedBeMe ? 'liked' : ''}">{@html isLikedBeMe ? filledLikeIcon : likeIcon}</span>
-                <!-- TODO: Add like count here if post.like.length > 0 -->
-            </button>
+            <LikeButton />
             <button class="postcard-button postcard-comment-button" onclick={onCommentButtonClick}>
                 <span class="postcard-button-icon">{@html commentIcon}</span>
                 {commentLabel}
@@ -146,9 +136,5 @@
             height: 1.5rem;
             color: var(--main-text-color);
         }
-    }
-
-    .postcard-button-icon.liked :global(svg){
-        color: #CC0129;
     }
 </style>
