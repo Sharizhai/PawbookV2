@@ -1,10 +1,16 @@
-<script lang="ts">import filledLikeIcon from "$assets/icons/posts/like-fill.svg?raw";
+<script lang="ts">
+    import type { MouseEventHandler } from "svelte/elements";
+
+    import filledLikeIcon from "$assets/icons/posts/like-fill.svg?raw";
     import likeIcon from "$assets/icons/posts/like.svg?raw";
 
+    let { onClick } : { onClick: MouseEventHandler<HTMLButtonElement> } = $props();
     let isLikedBeMe = $state(false);
 
-    function onLikeButtonClick() {
+    function onLikeButtonClick(event: MouseEvent & { currentTarget: EventTarget & HTMLButtonElement }) {
+        event.stopPropagation();
         isLikedBeMe = !isLikedBeMe;
+        onClick && onClick(event);
     }
 
 </script>

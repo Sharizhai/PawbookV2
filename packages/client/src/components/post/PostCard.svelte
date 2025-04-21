@@ -11,6 +11,10 @@
         console.log("Settings button clicked!");
     }
 
+    function onLikeButtonClick() {
+        console.log("Like button clicked!");
+    }
+
     function onCommentButtonClick() {
         console.log("Comment button clicked!");
     }
@@ -31,7 +35,7 @@
         </div>
 
         <div class="postcard-buttons-container">
-            <LikeButton />
+            <LikeButton onClick={onLikeButtonClick}/>
             <button class="postcard-button postcard-comment-button" onclick={onCommentButtonClick}>
                 <span class="postcard-button-icon">{@html commentIcon}</span>
                 {commentLabel}
