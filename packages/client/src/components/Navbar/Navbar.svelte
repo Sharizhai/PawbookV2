@@ -83,7 +83,7 @@
         @media only screen and (min-width: 1200px) {
             justify-content: flex-end;
             top: 0;
-            height: 70px;
+            height: 60px;
             border-bottom: 1px solid var(--second-highlight-color);
             border-top: none;
             background-color: transparent;
