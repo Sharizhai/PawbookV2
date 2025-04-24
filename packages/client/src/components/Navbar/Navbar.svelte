@@ -51,7 +51,7 @@
 
         <div class="navbar-logo-container">
             <img alt="Pawbook Logo" class="navbar-logo" src={logo} />
-            <h1 class="navbar-logo-title">PawBook</h1>
+            <h1 class="navbar-logo-title">Pawbook</h1>
         </div>
 
         <div class="navbar-items-container">
