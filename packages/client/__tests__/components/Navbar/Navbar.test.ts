@@ -12,7 +12,7 @@ import { push } from "svelte-spa-router";
 test("Navbar should render the logo", () => {
     const { getByAltText } = render(Navbar);
 
-    expect(getByAltText("PawBook Logo")).toBeInTheDocument();
+    expect(getByAltText("Pawbook Logo")).toBeInTheDocument();
 });
 
 test("Navbar should render all navigation buttons", async () => {
