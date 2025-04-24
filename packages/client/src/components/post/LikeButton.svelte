@@ -4,7 +4,7 @@
     import filledLikeIcon from "$assets/icons/posts/like-fill.svg?raw";
     import likeIcon from "$assets/icons/posts/like.svg?raw";
 
-    let { onClick } : { onClick: MouseEventHandler<HTMLButtonElement> } = $props();
+    let { onClick, likeCount } : { onClick: MouseEventHandler<HTMLButtonElement>, likeCount?: number } = $props();
     let isLikedBeMe = $state(false);
 
     function onLikeButtonClick(event: MouseEvent & { currentTarget: EventTarget & HTMLButtonElement }) {
@@ -18,7 +18,9 @@
     <div class="like-button-container">
         <button class="like-button" onclick={onLikeButtonClick}>
             <span class="like-button-icon {isLikedBeMe ? 'liked' : ''}">{@html isLikedBeMe ? filledLikeIcon : likeIcon}</span>
-            <!-- TODO: Add like count here if post.like.length > 0 -->
+            {#if likeCount}
+                <span class="like-button-count">{likeCount}</span>
+            {/if}
         </button>
     </div>
 
@@ -29,7 +31,6 @@
         justify-content: flex-start;
         align-items: center;
         width: 100%;
-        margin-top: 1rem;
         gap: 1rem;
     }
     
@@ -41,7 +42,7 @@
         display: flex;
         flex-direction: row;
         align-items: center;
-        gap: 0.5rem;
+        gap: 0.2rem;
         cursor: pointer;
 
         &:hover, &:hover :global(svg) {
@@ -53,9 +54,15 @@
             height: 1.5rem;
             color: var(--main-text-color);
         }
+
+        &-count {
+            font-size: 0.8rem;
+            font-weight: bold;
+            color: var(--color-like);
+        }
     }
 
     .like-button-icon.liked :global(svg){
-        color: #CC0129;
+        color: var(--color-like);
     }
 </style>
