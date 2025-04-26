@@ -1,6 +1,5 @@
 import { test, expect, vi } from "vitest";
 import { render, fireEvent } from "@testing-library/svelte";
-import likeIcon from "$assets/icons/posts/like.svg?raw";
 import LikeButton from "$components/post/LikeButton.svelte";
 
 test("Should render with the good number of likes", () => {
