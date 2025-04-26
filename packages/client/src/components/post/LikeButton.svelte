@@ -49,6 +49,11 @@
             color: var(--second-highlight-color);
         }
 
+        &-icon{
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+
         &-icon :global(svg) {
             width: 1.5rem;
             height: 1.5rem;
