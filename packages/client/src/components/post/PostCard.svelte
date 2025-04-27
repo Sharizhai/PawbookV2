@@ -1,11 +1,23 @@
 <script lang="ts">
+    import CommentInput from "./CommentInput.svelte";
     import SettingsButton from "$components/SettingsButton.svelte";
     import LikeButton from "$components/post/LikeButton.svelte";
+    import TopContainerInfos from "./TopContainerInfos.svelte";
     import * as messages from "$lib/paraglide/messages";
+    import PostContent from "./PostContent.svelte";
 
     import commentIcon from "$assets/icons/posts/comment.svg?raw";
 
     const commentLabel = messages.post_comment();
+
+    let isCommentInputVisible = false;
+
+    const postPhotos = [
+        "/paws.png",
+        "/paws.png",
+        "/paws.png",
+        "/paws.png",
+    ];
 
     function onSettingsButtonClick() {
         console.log("Settings button clicked!");
@@ -16,33 +28,32 @@
     }
 
     function onCommentButtonClick() {
-        console.log("Comment button clicked!");
+        isCommentInputVisible = !isCommentInputVisible;
+    }
+
+    function onSendCommentButtonClick(commentText: string) {
+        console.log("Comment text:", commentText);
     }
 
 </script>
 
     <div class="postcard-main-container">
+        <SettingsButton onClick={onSettingsButtonClick} customClass="postcard-settings-button" />
 
-        <div class="postcard-user-infos-container">
-            <SettingsButton onClick={onSettingsButtonClick} customClass="postcard-settings-button" />
-            <img src="/paws.png" alt="User Avatar" class="postcard-user-avatar" />
-            <div class="postcard-user-name-container">
-                <div class="postcard-user-name">User Name</div>
-                <div class="postcard-user-post-date">2j</div>
-            </div>   
-        </div>
-        <div class="postcard-content">
-        </div>
+        <TopContainerInfos profilePicture="/paws.png" firstName="User" lastName="Name" postCreationDate={new Date("2024-10-14T17:33:11.964+00:00")}/>
+        <PostContent textContent="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." imageContent={postPhotos}/>
 
         <div class="postcard-buttons-container">
-            <LikeButton onClick={onLikeButtonClick}/>
+            <LikeButton onClick={onLikeButtonClick} likeCount={150}/>
+
             <button class="postcard-button postcard-comment-button" onclick={onCommentButtonClick}>
                 <span class="postcard-button-icon">{@html commentIcon}</span>
                 {commentLabel}
             </button>
-
             <!-- TODO: Add comment count here if post.omment.length > 0 -->
         </div>
+
+        <CommentInput bind:isVisible={isCommentInputVisible} onClick={onSendCommentButtonClick}/>
     </div>
 
 <style lang="scss">
@@ -61,35 +72,6 @@
         padding: 0.625rem;
     }
 
-    .postcard-user-infos-container {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items: center;
-        width: 100%;
-    }
-
-    .postcard-user {
-        &-avatar{
-            width: 3.5rem;
-            height: 3.5rem;
-            border-radius: 50%;
-            margin-right: 0.5rem;
-            border: 1px solid rgba(30, 138, 182, 0.4);
-        }
-
-        &-name {
-            font-size: 0.9rem;
-            font-weight: bold;
-            color: var(--main-text-color);
-        }
-
-        &-post-date {
-            font-size: 0.8rem;
-            color: var(--second-text-color);
-        }
-    }
-
     :global(.postcard-settings-button) {
         position: absolute;
         top: 0.5rem;
@@ -99,25 +81,16 @@
         cursor: pointer;
     }
 
-    .postcard-content {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        width: 100%;
-        margin-top: 1rem;
-        font-size: 0.9rem;
-        color: var(--main-text-color);
-        text-align: left;
-    }
-
     .postcard-buttons-container {
         display: flex;
         flex-direction: row;
-        justify-content: flex-start;
+        justify-content: center;
         align-items: center;
         width: 100%;
         margin-top: 1rem;
+        padding-top: 0.5rem;
         gap: 1rem;
+        border-top: 1px solid rgba(30, 138, 182, 0.2);
     }
     
     .postcard-button {
@@ -133,6 +106,11 @@
 
         &:hover, &:hover :global(svg) {
             color: var(--second-highlight-color);
+        }
+
+        &-icon {
+            width: 1.5rem;
+            height: 1.5rem;
         }
 
         &-icon :global(svg) {
