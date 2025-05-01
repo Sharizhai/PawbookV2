@@ -4,10 +4,10 @@
 
 <script lang="ts">
     import LanguageDropdown from "$components/LanguageDropdown.svelte";
-    import BackButton from "$components/BackButton.svelte";
-    import Button from "$components/Button.svelte";
+    import BackButton from "$components/generic/BackButton.svelte";
+    import Button from "$components/generic/Button.svelte";
     import * as messages from "$lib/paraglide/messages";
-    import Input from "$components/Input.svelte";
+    import Input from "$components/generic/Input.svelte";
     import { link, push } from "svelte-spa-router";
     import logo from "/logo.png";
     import paws from "/paws.png";

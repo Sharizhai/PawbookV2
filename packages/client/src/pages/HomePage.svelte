@@ -4,7 +4,7 @@
 
 <script lang="ts">
     import LanguageDropdown from "$components/LanguageDropdown.svelte";
-    import Button from "$components/Button.svelte";
+    import Button from "$components/generic/Button.svelte";
     import * as messages from "$lib/paraglide/messages";
     import { link, push } from "svelte-spa-router";
     import logo from "/logo.png";

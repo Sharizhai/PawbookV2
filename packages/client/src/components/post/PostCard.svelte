@@ -1,6 +1,6 @@
 <script lang="ts">
     import CommentInput from "./CommentInput.svelte";
-    import SettingsButton from "$components/SettingsButton.svelte";
+    import SettingsButton from "$components/generic/SettingsButton.svelte";
     import LikeButton from "$components/post/LikeButton.svelte";
     import TopContainerInfos from "./TopContainerInfos.svelte";
     import * as messages from "$lib/paraglide/messages";

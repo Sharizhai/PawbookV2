@@ -4,9 +4,9 @@
 
 <script lang="ts">
     import LanguageDropdown from "$components/LanguageDropdown.svelte";
-    import Button from "$components/Button.svelte";
+    import Button from "$components/generic/Button.svelte";
     import * as messages from "$lib/paraglide/messages";
-    import Input from "$components/Input.svelte";
+    import Input from "$components/generic/Input.svelte";
     import { link, push } from "svelte-spa-router";
 
     const incentiveLabel = messages.signup_incentive();
