@@ -8,6 +8,7 @@
         customStyle,
         isDisabled = false,
         isCTA = false,
+        hadShadow
     } : {
         onClick: MouseEventHandler<HTMLButtonElement>,
         label: string,
@@ -15,10 +16,17 @@
         customStyle?: string,
         isDisabled?: boolean,
         isCTA?: boolean,
+        hadShadow?: boolean
     } = $props();
 </script>
 
-<button class="button-default {customClass ?? ''}" onclick={onClick} style={customStyle} disabled={isDisabled} class:main-cta={isCTA}> {label} </button>
+<button class="button-default {customClass ?? ''}"
+        onclick={onClick}
+        style={customStyle}
+        disabled={isDisabled}
+        class:main-cta={isCTA}
+        class:shadow-box={hadShadow}
+> {label} </button>
 
 <style lang="scss">
     .button-default {
@@ -55,4 +63,37 @@
             border: 1px solid var(--main-text-color);
         }
     }
+
+    .shadow-box {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    }
+
+    //.shadow-box {
+    //    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    //    transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+    //    box-shadow 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+    //
+    //    &:hover {
+    //        animation: bounceUp 0.6s ease forwards;
+    //        box-shadow: 0 10px 24px rgba(0, 0, 0, 0.3);
+    //    }
+    //}
+    //
+    //@keyframes bounceUp {
+    //    0% {
+    //        transform: translateY(0);
+    //    }
+    //    40% {
+    //        transform: translateY(-8px);
+    //    }
+    //    60% {
+    //        transform: translateY(-4px);
+    //    }
+    //    80% {
+    //        transform: translateY(-6px);
+    //    }
+    //    100% {
+    //        transform: translateY(-6px);
+    //    }
+    //}
 </style>
