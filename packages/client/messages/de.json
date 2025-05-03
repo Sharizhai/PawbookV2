@@ -44,5 +44,8 @@
     "navbar_profile": "Profil",
     "navbar_menu": "Menü",
 
-    "post_comment": "Kommentieren"
+    "post_comment": "Kommentieren",
+
+    "profile_tab_posts": "Veröffentlichungen",
+    "profile_tab_animals": "Tiere"
 }

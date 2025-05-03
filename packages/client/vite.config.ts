@@ -25,13 +25,14 @@ export default defineConfig({
     alias: {
       $public: path.resolve("./public"),
       $assets: path.resolve("./src/assets"),
+      $components: path.resolve("./src/components"),
+      $config: path.resolve("./src/config"),
       $lib: path.resolve("./src/lib"),
       $pages: path.resolve("./src/pages"),
       $services: path.resolve("./src/services"),
       $stores: path.resolve("./src/stores"),
-      $utils: path.resolve("./src/utils"),
       $types: path.resolve("./src/types"),
-      $components: path.resolve("./src/components"),
+      $utils: path.resolve("./src/utils"),
     },
   }
 });
