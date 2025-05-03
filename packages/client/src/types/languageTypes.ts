@@ -1,7 +1,7 @@
 export interface LanguageOption {
 	key: string;
 	value: string;
-};
+}
 
 export const languageOptions: LanguageOption[] = [
 	{ key: "en", value: "🇬🇧 English" },
