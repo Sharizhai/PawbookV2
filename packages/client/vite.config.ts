@@ -30,6 +30,7 @@ export default defineConfig({
       $services: path.resolve("./src/services"),
       $stores: path.resolve("./src/stores"),
       $utils: path.resolve("./src/utils"),
+      $types: path.resolve("./src/types"),
       $components: path.resolve("./src/components"),
     },
   }

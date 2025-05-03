@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { languageOptions } from "../types/languageTypes";
+    import { languageOptions } from "$types/languageTypes";
     import { app } from "$stores/stores.svelte";
 
     let isLanguageDropdownExpanded = false;
