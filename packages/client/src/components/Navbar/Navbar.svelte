@@ -92,7 +92,6 @@
     }
 
     .navbar-logo-container {
-        display: flex;
         justify-content: center;
         justify-self: flex-start;
         height: 100%;
