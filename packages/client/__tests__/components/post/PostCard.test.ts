@@ -1,5 +1,5 @@
 import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
-import { render, fireEvent, screen } from "@testing-library/svelte";
+import { render, fireEvent } from "@testing-library/svelte";
 import PostCard from "$components/post/PostCard.svelte";
 
 const originalConsoleLog = console.log;
