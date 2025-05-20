@@ -1,6 +1,6 @@
 import { test, expect } from "vitest";
 import { render, fireEvent } from "@testing-library/svelte";
-import Input from "$components/Input.svelte";
+import Input from "$components/generic/Input.svelte";
 
 test("Should render with the good label", () => {
     const { getByText } = render(Input, { props: { label: "Email", name: "email", type: "email" } });
