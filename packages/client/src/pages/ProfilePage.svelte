@@ -5,6 +5,7 @@
 <script lang="ts">
     import EmptyContentCTA from "$components/profile/EmptyContentCTA.svelte";
     import ProfileCard from "$components/profile/ProfileCard.svelte";
+    import AnimalCard from "$components/profile/AnimalCard.svelte";
     import ProfileTabs from "$components/profile/ProfileTabs.svelte";
     import PostCard from "$components/post/PostCard.svelte";
     import Navbar from "$components/navbar/Navbar.svelte";
@@ -47,16 +48,12 @@
 
         {:else if activeTab === ProfileTab.Animals}
             <div class="content-container">
-                {#if hasNoAnimals}
+                {#if !hasNoAnimals}
                     <EmptyContentCTA label={emptyAnimalButtonLabel} incentive={emptyAnimalIncentive} onClick={onCreateFirstPostButtonClick}/>
 
                 {:else}
-                    <PostCard />
-                    <PostCard />
-                    <PostCard />
-                    <PostCard />
-                    <PostCard />
-                    <PostCard />
+                    <AnimalCard animalAge={5} animalType={"Chat"} animalLikes={150} animalName="Lulu" animalRace="hnfdju" animalDescription="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce pellentesque est a sapien semper bibendum. Mauris velit neque, tempor non tellus metus."/>
+                    <AnimalCard animalLikes={12} animalType={"Chien"} animalName="Lili" animalRace="hnfdju"/>
                 {/if}
             </div>
         {/if}
