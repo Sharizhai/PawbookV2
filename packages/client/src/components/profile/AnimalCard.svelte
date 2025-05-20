@@ -26,11 +26,11 @@
     }
 
     function onSettingsButtonClick() {
-
+        console.log("Settings button clicked!");
     }
 
     function onLikeButtonClick() {
-
+        console.log("Like button clicked!");
     }
 </script>
 <div class="animal-card-container">
