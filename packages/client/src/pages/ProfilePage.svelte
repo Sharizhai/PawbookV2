@@ -37,12 +37,7 @@
                     <EmptyContentCTA label={emptyPostButtonLabel} incentive={emptyPostIncentive} onClick={onCreateFirstPostButtonClick}/>
 
                 {:else}
-                <PostCard />
-                <PostCard />
-                <PostCard />
-                <PostCard />
-                <PostCard />
-                <PostCard />
+                    <PostCard />
                 {/if}
             </div>
 
