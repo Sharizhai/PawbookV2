@@ -59,6 +59,7 @@
         <div class="dialog-panel-background" bind:this={fullScreenBackgroundElement} transition:fade={{duration:200}}></div>
 
         <div class="dialog-panel" bind:this={panelElement} transition:fade={{duration:200}}>
+            <div class="background"></div>
             <div class="dialog-panel-header">
                 {#if isMultiStep && currentStep > 0}
                     <button class="dialog-panel-header-back-button" onclick={onBackButtonClick}>
@@ -97,7 +98,8 @@
         right: 0;
         backdrop-filter: blur(2.5px);
         z-index: 100;
-        pointer-events: none;
+        pointer-events: auto;
+        overflow: hidden;
     }
 
     .dialog-panel {
@@ -109,7 +111,7 @@
         background-color: var(--main-background-color);
         width: 90%;
         max-width: 40rem;
-        height: 45rem;
+        max-height: 45rem;
         z-index: 101;
         border-radius: 1.25rem;
         border: 1px solid rgba(30, 138, 182, 0.4);
@@ -182,5 +184,19 @@
                 }
             }
         }
+    }
+
+    .background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url('/paws.png');
+        background-size: 68rem auto;
+        background-position: center;
+        background-repeat: no-repeat;
+        opacity: 0.05;
+        border-radius: 1.25rem;
     }
 </style>
