@@ -54,12 +54,12 @@
     }
 
     .main-cta {
-        background-color: var(--main-text-color);
-        border: 1px solid var(--main-text-color);
-        color: #FFFFFF;
+        background-color: rgba(30, 138, 182, 0.5);
+        border: 1px solid rgba(30, 138, 182, 0.5);
+        color: var(--main-text-color);
 
         &:hover {
-            color: var(--second-highlight-color);
+            color: var(--main-text-color);
             border: 1px solid var(--main-text-color);
         }
     }
