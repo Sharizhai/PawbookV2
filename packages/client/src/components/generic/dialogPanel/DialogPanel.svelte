@@ -1,4 +1,6 @@
 <script lang="ts">
+    import closeIcon from "$assets/icons/close.svg?raw";
+    import backIcon from "$assets/icons/back.svg?raw";
     import {fade} from "svelte/transition";
     import type {Snippet} from "svelte";
 
@@ -63,14 +65,14 @@
             <div class="dialog-panel-header">
                 {#if isMultiStep && currentStep > 0}
                     <button class="dialog-panel-header-back-button" onclick={onBackButtonClick}>
-                        <span class="material-icons">chevron_left</span>
+                        <span class="dialog-panel-header-back-button-icon">{@html backIcon}</span>
                     </button>
                 {/if}
 
                 <span class="dialog-panel-header-title">{title}</span>
 
                 <button class="dialog-panel-header-close-button" onclick={onCloseButtonClick}>
-                    <span class="material-icons">close</span>
+                    <span class="dialog-panel-header-close-button-icon">{@html closeIcon}</span>
                 </button>
             </div>
 
@@ -131,11 +133,12 @@
 
             &-back-button {
                 position: absolute;
-                top: 1.8rem;
+                top: 1.6rem;
                 left: 1rem;
                 background-color: transparent;
                 border: none;
                 color: var(--main-text-color);
+                cursor: pointer;
             }
 
             &-title {
@@ -149,11 +152,12 @@
 
             &-close-button {
                 position: absolute;
-                top: 1.8rem;
+                top: 1.6rem;
                 right: 1rem;
                 background-color: transparent;
                 border: none;
                 color: var(--main-text-color);
+                cursor: pointer;
             }
         }
 
@@ -198,5 +202,17 @@
         background-repeat: no-repeat;
         opacity: 0.05;
         border-radius: 1.25rem;
+    }
+
+    .dialog-panel-header-close-button-icon :global(svg) {
+        width: 1.5rem;
+        height: 1.5rem;
+        color: var(--main-text-color);
+    }
+
+    .dialog-panel-header-back-button-icon :global(svg) {
+        width: 1.5rem;
+        height: 1.5rem;
+        color: var(--main-text-color);
     }
 </style>
