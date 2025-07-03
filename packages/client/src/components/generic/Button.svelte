@@ -36,7 +36,7 @@
         min-width: 10.625rem;
         height: 2.5rem;
         border-radius: 0.375rem;
-        border: 1px solid var(--color-main-dark);
+        border: 1px solid rgba(30, 138, 182, 0.5);
         background-color: rgba(255, 255, 255, 0.5);
         color: var(--main-text-color);
         font-size: 1rem;
