@@ -1,0 +1,21 @@
+.scrollbars::-webkit-scrollbar {
+    width: 0.5rem;
+}
+
+.scrollbars::-webkit-scrollbar-thumb {
+    background-color: var(--second-text-color);
+    border-radius: 0.25rem;
+    border: 1px solid var(--main-text-color);
+}
+
+.scrollbars::-webkit-scrollbar-track {
+    background-color: var(--main-text-color);
+    border-radius: 0.25rem;
+}
+
+@supports not selector(::-webkit-scrollbar) {
+    .scrollbar {
+        scrollbar-width: thin;
+        scrollbar-color: var(--second-text-color) var(--main-text-color);
+    }
+}
