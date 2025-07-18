@@ -23,7 +23,7 @@
 <style lang="scss">
     .image-container {
         position: relative;
-        border-radius: 0.375rem;
+        border-radius: 0.6rem;
         overflow: hidden;
         background-color: rgba(var(--main-background-color), 0.9);
         border: 1px solid rgba(30, 138, 182, 0.2);
@@ -62,10 +62,6 @@
         font-weight: bold;
         opacity: 0;
         transition: opacity 0.2s ease;
-
-        &:hover {
-            background-color: rgba(185, 28, 28, 0.9);
-        }
 
         &-icon {
             width: 1.5rem;
