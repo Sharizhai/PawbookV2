@@ -13,7 +13,7 @@
   import HomePage from "$pages/HomePage.svelte";
   import FeedPage from "$pages/FeedPage.svelte";
   import GcuPage from "$pages/GCUPage.svelte";
-  
+
   const routes = {
     "/": HomePage,
     "/gcu": GcuPage,
@@ -23,14 +23,14 @@
     "/feed": FeedPage,
     "/profile": ProfilePage,
   };
- 
+
   onMount(() => {
     app.activeLocale = localStorage.getItem("locale") ?? navigator.language.slice(0, 2);
 
-    if (isMobile()) 
+    if (isMobile())
       document.body.classList.add("mobile");
   });
-  
+
 </script>
 
 <Router {routes} />

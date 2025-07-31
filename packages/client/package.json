@@ -35,6 +35,7 @@
   "dependencies": {
     "@glidejs/glide": "^3.7.1",
     "@types/node": "^22.13.14",
+    "@wjfe/n-savant": "^0.3.0",
     "animate.css": "^4.1.1",
     "date-fns": "^4.1.0",
     "jwt-decode": "^4.0.0",

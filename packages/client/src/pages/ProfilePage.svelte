@@ -3,6 +3,7 @@
 </svelte:head>
 
 <script lang="ts">
+    import PostCreationDialogPanel from "$components/dialogPanels/PostCreationDialogPanel.svelte";
     import EmptyContentCTA from "$components/profile/EmptyContentCTA.svelte";
     import ProfileCard from "$components/profile/ProfileCard.svelte";
     import AnimalCard from "$components/profile/AnimalCard.svelte";
@@ -22,11 +23,17 @@
     let hasNoPosts = $state(true);
     let hasNoAnimals = $state(true);
 
+    let isPostCreationDialogPanelOpen = $state(false);
+
     function onHeaderTabButtonClick(tab: ProfileTab) {
         activeTab = tab;
     }
 
     function onCreateFirstPostButtonClick() {
+        isPostCreationDialogPanelOpen = true;
+    }
+
+    function onCreateFirstAnimalButtonClick() {
 
     }
 </script>
@@ -43,8 +50,8 @@
 
         {:else if activeTab === ProfileTab.Animals}
             <div class="content-container">
-                {#if !hasNoAnimals}
-                    <EmptyContentCTA label={emptyAnimalButtonLabel} incentive={emptyAnimalIncentive} onClick={onCreateFirstPostButtonClick}/>
+                {#if hasNoAnimals}
+                    <EmptyContentCTA label={emptyAnimalButtonLabel} incentive={emptyAnimalIncentive} onClick={onCreateFirstAnimalButtonClick}/>
 
                 {:else}
                     <AnimalCard animalAge={5} animalType={"Chat"} animalLikes={150} animalName="Lulu" animalRace="hnfdju" animalDescription="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce pellentesque est a sapien semper bibendum. Mauris velit neque, tempor non tellus metus."/>
@@ -63,6 +70,8 @@
         </div>
         <Navbar />
     </main>
+
+    <PostCreationDialogPanel bind:isVisible={isPostCreationDialogPanelOpen}/>
 
 <style lang="scss">
     #profile-page {
