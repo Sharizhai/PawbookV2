@@ -51,5 +51,12 @@
     "profile_tab_first_post": "Créer ma première publication",
     "profile_tab_animals": "Animaux",
     "profile_tab_animals_incentive": "Vous n'avez pas encore de profil d'animal",
-    "profile_tab_first_animal": "Créer un profil pour mon animal"
+    "profile_tab_first_animal": "Créer un profil pour mon animal",
+
+    "post_creation_dialog_panel_title": "Nouvelle publication",
+    "post_creation_dialog_panel_photo_button": "Ajouter une photo",
+    "post_creation_dialog_panel_photo_button_limit": "Limite atteinte",
+    "post_creation_dialog_panel_too_many_files": "Vous ne pouvez ajouter que 10 images maximum",
+    "post_creation_dialog_panel_unauthorized_files" : "Seules les images sont autorisées",
+    "post_creation_dialog_panel_publish": "Publier"
 }

@@ -48,6 +48,19 @@
             color: var(--second-highlight-color);
             border: 1px solid var(--second-highlight-color);
         }
+
+        &:disabled {
+            color: white;
+            background-color: var(--second-text-color);
+            border: 1px solid black;
+
+            &:hover {
+                color: white;
+                background-color: var(--second-text-color);
+                border: 1px solid black;
+                cursor: not-allowed;
+            }
+        }
     }
 
     .main-cta {

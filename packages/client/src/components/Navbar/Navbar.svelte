@@ -1,4 +1,5 @@
 <script lang="ts">
+    import PostCreationDialogPanel from "$components/dialogPanels/PostCreationDialogPanel.svelte";
     import * as messages from "$lib/paraglide/messages";
     import NavbarButton from "./NavbarButton.svelte";
     import { push } from "svelte-spa-router";
@@ -18,6 +19,8 @@
     const menuLabel = messages.navbar_menu();
     const addLabel = messages.navbar_add();
 
+    let isPostCreationDialogPanelOpen = false;
+
     function onHomeButtonClick() {
         push("/feed");
     }
@@ -28,8 +31,7 @@
     }
 
     function onAddButtonClick() {
-        // Handle add button click
-        console.log("Add button clicked");
+        isPostCreationDialogPanelOpen = true;
     }
 
     function onNotificationButtonClick() {
@@ -66,6 +68,8 @@
             <NavbarButton label={menuLabel} icon={menuIcon} onClick={onMenuButtonClick}/>
         </div>
     </nav>
+
+<PostCreationDialogPanel bind:isVisible={isPostCreationDialogPanelOpen}/>
 
 <style lang="scss">
     #navbar-container {

@@ -113,7 +113,7 @@
         background-color: var(--main-background-color);
         width: 90%;
         max-width: 40rem;
-        max-height: 45rem;
+        max-height: 80vh;
         z-index: 101;
         border-radius: 1.25rem;
         border: 1px solid rgba(30, 138, 182, 0.4);
