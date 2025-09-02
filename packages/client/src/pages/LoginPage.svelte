@@ -4,9 +4,10 @@
 
 <script lang="ts">
     import LanguageDropdown from "$components/LanguageDropdown.svelte";
+    import {authLogin} from "$services/authServices.svelte";
     import Button from "$components/generic/Button.svelte";
-    import * as messages from "$lib/paraglide/messages";
     import Input from "$components/generic/Input.svelte";
+    import * as messages from "$lib/paraglide/messages";
     import { link, push } from "svelte-spa-router";
     import logo from "/logo.png";
 
@@ -20,12 +21,41 @@
     const createAccount = messages.login_create_account();
     const gcuLabel = messages.home_gcu();
 
+    let errorMessage: string = $state(" ");
+
     function onLoginButtonClick() {
         push("/feed");
     }
 
     function onCreateAccountButtonClick() {
         push("/signup");
+    }
+
+    async function onSubmit(event: Event) {
+        event.preventDefault();
+
+        const formData = new FormData(event.target as HTMLFormElement);
+        const email = formData.get("email") as string;
+        const password = formData.get("password") as string;
+
+        console.log(email, password);
+
+        const submitResponse = await signIn(email, password);
+
+        if(submitResponse) {
+            push("/dashboard");
+        }
+    }
+
+    async function signIn(email: string, password: string) {
+        errorMessage = " ";
+
+        const response = await authLogin(email, password)
+            .catch((error) => {
+                errorMessage = error.message;
+            });
+
+        return response;
     }
 
 </script>
@@ -41,7 +71,7 @@
         <h1 class="login-page-title">Pawbook</h1>
 
         <div class="login-page-form-container">
-            <form class="login-page-form" action="/login" method="POST">
+            <form class="login-page-form" action="/login" method="POST" onsubmit={onSubmit}>
                 <Input label={emailLabel} type={"email"} name={"email"} placeholder={emailPlaceholder}/>
                 <Input label={passwordLabel} type={"password"} name={"password"} placeholder={passwordPlaceholder} customClass={"login-page-form-input-no-margin"}/>
                 <a href="/forgotten-password" use:link class="login-page-form-link">{passwordForgotten}</a>
