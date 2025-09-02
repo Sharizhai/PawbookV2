@@ -97,8 +97,13 @@
                 border: 1px solid var(--second-highlight-color);
             }
 
-            &:focus {
+            &:focus-visible {
                 border: 1px solid var(--second-highlight-color);
+                outline: none;
+            }
+            
+            &:focus {
+                outline: none;
             }
 
             &-wrapper {
