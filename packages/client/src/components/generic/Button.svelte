@@ -1,5 +1,6 @@
 <script lang="ts">
     import type { MouseEventHandler } from "svelte/elements";
+    import type {ButtonType} from "$types/buttonTypes";
 
     let {
         onClick,
@@ -8,15 +9,17 @@
         customStyle,
         isDisabled = false,
         isCTA = false,
-        hadShadow
+        hadShadow,
+        type = "button"
     } : {
-        onClick: MouseEventHandler<HTMLButtonElement>,
+        onClick?: MouseEventHandler<HTMLButtonElement>,
         label: string,
         customClass?: string,
         customStyle?: string,
         isDisabled?: boolean,
         isCTA?: boolean,
-        hadShadow?: boolean
+        hadShadow?: boolean,
+        type?: ButtonType
     } = $props();
 </script>
 
@@ -26,6 +29,7 @@
         disabled={isDisabled}
         class:main-cta={isCTA}
         class:shadow-box={hadShadow}
+        type={type}
 > {label} </button>
 
 <style lang="scss">
