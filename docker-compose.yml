@@ -1,0 +1,38 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: ./packages/server/Dockerfile
+    container_name: pawbook-api
+    working_dir: /app
+    ports:
+      - '3000:3000'
+    env_file:
+      - ./packages/server/.env
+    environment:
+      PORT: '3000'
+      NODE_ENV: 'development'
+      ORIGIN: 'http://localhost:5173'
+    volumes:
+      - ./packages/server/src:/app/packages/server/src
+      - ./packages/server/tsconfig.json:/app/packages/server/tsconfig.json
+
+  client:
+    build:
+      context: .
+      dockerfile: ./packages/client/Dockerfile
+    container_name: pawbook-client
+    working_dir: /app
+    ports:
+      - '5173:5173'
+    env_file:
+      - ./packages/client/.env
+    environment:
+      VITE_API_URL: 'http://localhost:3000'
+    depends_on:
+      - api
+    volumes:
+      - ./packages/client/src:/app/packages/client/src
+      - ./packages/client/public:/app/packages/client/public
+      - ./packages/client/vite.config.ts:/app/packages/client/vite.config.ts
+      - ./packages/client/svelte.config.js:/app/packages/client/svelte.config.js
