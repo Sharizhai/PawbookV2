@@ -9,11 +9,11 @@
     "allowSyntheticDefaultImports": true,
     "baseUrl": ".",
     "paths": {
-      "$api/*": ["src/api/*"],
+      "$application/*": ["src/application/*"],
       "$config/*": ["src/config/*"],
-      "$db/*": ["src/db/*"],
-      "$middlewares/*": ["src/middlewares/*"],
-      "$routes/*": ["src/routes/*"],
+      "$domain/*": ["src/domain/*"],
+      "$infrastructure/*": ["src/infrastructur/*"],
+      "$presentation/*": ["src/presentation/*"],
       "$types/*": ["src/types/*"],
       "$utils/*": ["src/utils/*"]
     }

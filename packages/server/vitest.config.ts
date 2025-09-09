@@ -21,11 +21,11 @@ export default defineConfig(({ mode }) =>({
   },
   resolve: {
       alias: {
-        $api: path.resolve("./src/api"),
+        $application: path.resolve("./src/application"),
         $config: path.resolve("./src/config"),
-        $db: path.resolve("./src/db"),
-        $middlewares: path.resolve("./src/middlewares"),
-        $routes: path.resolve("./src/routes"),
+        $domain: path.resolve("./src/domain"),
+        $infrastructure: path.resolve("./src/infrastructure"),
+        $presentation: path.resolve("./src/presentation"),
         $types: path.resolve("./src/types"),
         $utils: path.resolve("./src/utils"),
       },
