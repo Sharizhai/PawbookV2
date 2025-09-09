@@ -27,6 +27,7 @@ export default defineConfig({
       $assets: path.resolve("./src/assets"),
       $components: path.resolve("./src/components"),
       $config: path.resolve("./src/config"),
+        $data: path.resolve("./src/data"),
       $lib: path.resolve("./src/lib"),
       $pages: path.resolve("./src/pages"),
       $services: path.resolve("./src/services"),
