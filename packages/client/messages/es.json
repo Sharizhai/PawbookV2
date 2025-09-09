@@ -58,5 +58,8 @@
     "post_creation_dialog_panel_photo_button_limit": "Límite alcanzado",
     "post_creation_dialog_panel_too_many_files": "Sólo puedes añadir un máximo de 10 imágenes",
     "post_creation_dialog_panel_unauthorized_files" : "Sólo se autorizan imágenes",
-    "post_creation_dialog_panel_publish": "Publique"
+    "post_creation_dialog_panel_publish": "Publique",
+
+    "animal_creation_dialog_panel_title": "Nueva mascota",
+    "animal_creation_dialog_panel_add": "Añadir mi mascota"
 }

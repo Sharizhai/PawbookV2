@@ -58,5 +58,8 @@
     "post_creation_dialog_panel_photo_button_limit": "Limit reached",
     "post_creation_dialog_panel_too_many_files": "You can only add a maximum of 10 images",
     "post_creation_dialog_panel_unauthorized_files" : "Only images are authorised",
-    "post_creation_dialog_panel_publish": "Publish"
+    "post_creation_dialog_panel_publish": "Publish",
+
+    "animal_creation_dialog_panel_title": "New animal",
+    "animal_creation_dialog_panel_add": "Add my animal"
 }

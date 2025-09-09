@@ -58,5 +58,8 @@
     "post_creation_dialog_panel_photo_button_limit": "Limite raggiunto",
     "post_creation_dialog_panel_too_many_files": "È possibile aggiungere solo un massimo di 10 immagini",
     "post_creation_dialog_panel_unauthorized_files" : "Sono autorizzate solo le immagini",
-    "post_creation_dialog_panel_publish": "Pubblicare"
+    "post_creation_dialog_panel_publish": "Pubblicare",
+
+    "animal_creation_dialog_panel_title": "Nuovo animale domestico",
+    "animal_creation_dialog_panel_add": "Aggiungi il mio animale domestico"
 }
